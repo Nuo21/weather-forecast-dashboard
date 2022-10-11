@@ -1,0 +1,10 @@
+a {
+    color: white !important;
+    font-size: 30px;
+    text-decoration: none !important;
+}
+
+#nav {
+    padding: 10px;
+    justify-content: center;
+}
