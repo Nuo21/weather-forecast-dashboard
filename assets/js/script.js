@@ -1,3 +1,4 @@
+//Variables
 var cityResultText = $("#cityResult");
 var tempResultText = $("#tempResult");
 var humidityResult = $("#humidityResult");
@@ -13,6 +14,7 @@ var forecastIcon = {};
 var forecastTemp = {};
 var forecastHum = {};
 var today = moment().format('DD' + "/" + 'MM' + '/' + 'YYYY');
+//API Key from OpenWeather
 var APIKey = "&units=imperial&APPID=d17a4e27c0a9f45be714b6ae8a3d89ee";
 var url =  "https://api.openweathermap.org/data/2.5/weather?q=";
 var citiesArray = JSON.parse(localStorage.getItem("Saved City")) || [];
@@ -25,6 +27,7 @@ $(document).ready(function (){
 
 });
 
+//Current weather
 function currentWeather(userInput) {
     mainIcon.empty();
     var queryURL = url + userInput + APIKey;
@@ -71,6 +74,7 @@ function currentWeather(userInput) {
     })
     }
 
+    //The forecast based on user search/input
     function forecast (userInput) {
         dayForecast.empty();
         rowCards.empty();
@@ -114,7 +118,8 @@ function currentWeather(userInput) {
                 })
     
             }
-
+            
+            //Local storage
             function storeData (userInput) {
                 var userInput = $("#searchInput").val().trim().toLowerCase();
                 var containsCity = false;
@@ -136,7 +141,7 @@ function currentWeather(userInput) {
             
             }
 
-
+            //Previous/last searches
             function lastSearch () {
                 buttonList.empty()
                 for (var i = 0; i < citiesArray.length; i ++) {
@@ -154,6 +159,7 @@ function currentWeather(userInput) {
             
             }
             
+            //Clicking the search button
             $(".btn").on("click", function (event){
                 event.preventDefault();
                 if ($("#searchInput").val() === "") {
