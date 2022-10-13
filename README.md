@@ -6,4 +6,8 @@ This is a wonderful weather app that allows the user to enter in a city and have
 
 ## Screenshot
 
+![weatherSSS](https://user-images.githubusercontent.com/111789697/195485747-90b6155c-14f1-4856-bf89-41f19c07aa01.png)
+
 ## Live Deploy Link
+
+https://nuo21.github.io/weather-forecast-dashboard/
